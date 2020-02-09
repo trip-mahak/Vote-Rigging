@@ -1,0 +1,18 @@
+create database pracdb;
+
+
+create table citizens
+(
+ID int not null unique,
+aadhar int not null,
+image varchar(40) 
+);
+
+alter table citizens change column ID citizen_id int not null unique auto-increment;
+
+alter table citizens add column name varchar(30)  after citizen_id;
+
+insert into citizens (name,aadhar,image) values ('Mr A',1001,'1001.jpg'),('Mr B',1002,'1002.jpg'), ('Mr C',1003,'1003.jpg'), ('Mr D',1004,'1004.jpg'), ('Mr E',1005,'1005.jpg'), ('Mr F',1006,'1006.jpg'), ('Mr G',1007,'1007.jpg'), ('Mr H',1008,'1008.jpg'), ('Mr I',1009,'1009.jpg'), ('Mr J',1010,'1010.jpg');
+
+
+
